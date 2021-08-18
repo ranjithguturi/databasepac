@@ -1,0 +1,9 @@
+{
+	"name": "databasepac",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "75a522d9-3e97-49d2-b1e9-c1de81b89bf4",
+		"tenantId": "8f5ceac1-8a7e-4849-b22e-a0d589d994b1"
+	}
+}
