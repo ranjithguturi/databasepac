@@ -1,0 +1,63 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "databasepac"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage3_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage4_connectionString": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase2_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase3_connectionString": {
+			"value": ""
+		},
+		"AzureSqlDatabase4_connectionString": {
+			"value": ""
+		},
+		"linkedService1_accountKey": {
+			"value": ""
+		},
+		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://dlg2rk.dfs.core.windows.net"
+		},
+		"HttpServer1_properties_typeProperties_url": {
+			"value": "https://cdn.rebrickable.com/media/downloads/part_relationships.csv.gz?1629097704.1762602"
+		},
+		"HttpServer2_properties_typeProperties_url": {
+			"value": "https://cdn.rebrickable.com/media/downloads/part_relationships.csv.gz?1629097704.1762602"
+		},
+		"HttpServer3_properties_typeProperties_url": {
+			"value": "https://rebrickable.com/downloads/"
+		},
+		"HttpServer4_properties_typeProperties_url": {
+			"value": "https://cdn.rebrickable.com/media/downloads/inventory_minifigs.csv.gz?1629097703.952266"
+		},
+		"linkedService1_properties_typeProperties_url": {
+			"value": "https://dlg2rk.dfs.core.windows.net"
+		},
+		"containerUri": {
+			"value": ""
+		},
+		"containerSasToken": {
+			"value": ""
+		}
+	}
+}
