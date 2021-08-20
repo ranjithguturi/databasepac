@@ -1,0 +1,12 @@
+{
+	"name": "HttpServer6",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://cdn.rebrickable.com/media/downloads/part_relationships.csv.gz?1629386853.433477",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
