@@ -1,0 +1,37 @@
+{
+	"name": "SourceDataset_00r",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "HttpServer6",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": "part_relationships.csv.gz"
+			},
+			"columnDelimiter": ",",
+			"rowDelimiter": "\n",
+			"compressionCodec": "gzip",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": [
+			{
+				"name": "rel_type",
+				"type": "String"
+			},
+			{
+				"name": "child_part_num",
+				"type": "String"
+			},
+			{
+				"name": "parent_part_num",
+				"type": "String"
+			}
+		]
+	}
+}
