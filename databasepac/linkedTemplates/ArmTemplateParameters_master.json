@@ -20,6 +20,9 @@
 		"AzureDataLakeStorage1_accountKey": {
 			"value": ""
 		},
+		"AzureDataLakeStorage2_accountKey": {
+			"value": ""
+		},
 		"AzureSqlDatabase1_connectionString": {
 			"value": ""
 		},
@@ -32,10 +35,16 @@
 		"AzureSqlDatabase4_connectionString": {
 			"value": ""
 		},
+		"HttpServer5_password": {
+			"value": ""
+		},
 		"linkedService1_accountKey": {
 			"value": ""
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"value": "https://dlg2rk.dfs.core.windows.net"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
 			"value": "https://dlg2rk.dfs.core.windows.net"
 		},
 		"HttpServer1_properties_typeProperties_url": {
@@ -49,6 +58,15 @@
 		},
 		"HttpServer4_properties_typeProperties_url": {
 			"value": "https://cdn.rebrickable.com/media/downloads/inventory_minifigs.csv.gz?1629097703.952266"
+		},
+		"HttpServer5_properties_typeProperties_url": {
+			"value": "https://cdn.rebrickable.com/media/downloads/part_relationships.csv.gz?1629386853.433477"
+		},
+		"HttpServer5_properties_typeProperties_userName": {
+			"value": "ranji"
+		},
+		"HttpServer6_properties_typeProperties_url": {
+			"value": "https://cdn.rebrickable.com/media/downloads/part_relationships.csv.gz?1629386853.433477"
 		},
 		"linkedService1_properties_typeProperties_url": {
 			"value": "https://dlg2rk.dfs.core.windows.net"

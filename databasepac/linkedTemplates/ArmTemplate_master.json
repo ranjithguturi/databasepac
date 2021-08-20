@@ -27,6 +27,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage1'"
 		},
+		"AzureDataLakeStorage2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'AzureDataLakeStorage2'"
+		},
 		"AzureSqlDatabase1_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase1'"
@@ -43,11 +47,19 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'AzureSqlDatabase4'"
 		},
+		"HttpServer5_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'HttpServer5'"
+		},
 		"linkedService1_accountKey": {
 			"type": "secureString",
 			"metadata": "Secure string for 'accountKey' of 'linkedService1'"
 		},
 		"AzureDataLakeStorage1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://dlg2rk.dfs.core.windows.net"
+		},
+		"AzureDataLakeStorage2_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://dlg2rk.dfs.core.windows.net"
 		},
@@ -66,6 +78,18 @@
 		"HttpServer4_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://cdn.rebrickable.com/media/downloads/inventory_minifigs.csv.gz?1629097703.952266"
+		},
+		"HttpServer5_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://cdn.rebrickable.com/media/downloads/part_relationships.csv.gz?1629386853.433477"
+		},
+		"HttpServer5_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "ranji"
+		},
+		"HttpServer6_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://cdn.rebrickable.com/media/downloads/part_relationships.csv.gz?1629386853.433477"
 		},
 		"linkedService1_properties_typeProperties_url": {
 			"type": "string",
@@ -113,6 +137,9 @@
 					"AzureDataLakeStorage1_accountKey": {
 						"value": "[parameters('AzureDataLakeStorage1_accountKey')]"
 					},
+					"AzureDataLakeStorage2_accountKey": {
+						"value": "[parameters('AzureDataLakeStorage2_accountKey')]"
+					},
 					"AzureSqlDatabase1_connectionString": {
 						"value": "[parameters('AzureSqlDatabase1_connectionString')]"
 					},
@@ -125,11 +152,17 @@
 					"AzureSqlDatabase4_connectionString": {
 						"value": "[parameters('AzureSqlDatabase4_connectionString')]"
 					},
+					"HttpServer5_password": {
+						"value": "[parameters('HttpServer5_password')]"
+					},
 					"linkedService1_accountKey": {
 						"value": "[parameters('linkedService1_accountKey')]"
 					},
 					"AzureDataLakeStorage1_properties_typeProperties_url": {
 						"value": "[parameters('AzureDataLakeStorage1_properties_typeProperties_url')]"
+					},
+					"AzureDataLakeStorage2_properties_typeProperties_url": {
+						"value": "[parameters('AzureDataLakeStorage2_properties_typeProperties_url')]"
 					},
 					"HttpServer1_properties_typeProperties_url": {
 						"value": "[parameters('HttpServer1_properties_typeProperties_url')]"
@@ -143,12 +176,41 @@
 					"HttpServer4_properties_typeProperties_url": {
 						"value": "[parameters('HttpServer4_properties_typeProperties_url')]"
 					},
+					"HttpServer5_properties_typeProperties_url": {
+						"value": "[parameters('HttpServer5_properties_typeProperties_url')]"
+					},
+					"HttpServer5_properties_typeProperties_userName": {
+						"value": "[parameters('HttpServer5_properties_typeProperties_userName')]"
+					},
+					"HttpServer6_properties_typeProperties_url": {
+						"value": "[parameters('HttpServer6_properties_typeProperties_url')]"
+					},
 					"linkedService1_properties_typeProperties_url": {
 						"value": "[parameters('linkedService1_properties_typeProperties_url')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "databasepac_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'databasepac_ArmTemplate_0')]"
+			]
 		}
 	]
 }
