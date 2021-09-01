@@ -2,15 +2,15 @@
 	"name": "DestinationDataset_un5",
 	"properties": {
 		"linkedServiceName": {
-			"referenceName": "AzureBlobStorage4",
+			"referenceName": "AzureDataLakeStorage2",
 			"type": "LinkedServiceReference"
 		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
-				"type": "AzureBlobStorageLocation",
-				"container": "bacpac"
+				"type": "AzureBlobFSLocation",
+				"fileSystem": "rkpart"
 			},
 			"columnDelimiter": "|",
 			"escapeChar": "\\",
