@@ -1,0 +1,69 @@
+{
+	"name": "SourceDataset_un5",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "AzureSqlDatabase6",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "AzureSqlTable",
+		"schema": [
+			{
+				"name": "MFR-NAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MODEL-NAME",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TYPE-AIRCRAFT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "TYPE-ENGINE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AC-CATEGORY",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AMAT-TC-BUILT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NUMBER-ENGINES",
+				"type": "nvarchar"
+			},
+			{
+				"name": "NUMBER-SEATS",
+				"type": "nvarchar"
+			},
+			{
+				"name": "AC-WEIGHT",
+				"type": "nvarchar"
+			},
+			{
+				"name": "SPEED",
+				"type": "nvarchar"
+			},
+			{
+				"name": "MFR-MDL-CODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "KIT-CODE",
+				"type": "nvarchar"
+			},
+			{
+				"name": "Prop-12",
+				"type": "nvarchar"
+			}
+		],
+		"typeProperties": {
+			"schema": "dbo",
+			"table": "ACFTREF"
+		}
+	}
+}
